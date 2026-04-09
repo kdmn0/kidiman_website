@@ -3,6 +3,12 @@ function loadComponents() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar-container').innerHTML = data;
+            if (typeof setupLanguageSwitcher === 'function') {
+                setupLanguageSwitcher();
+            }
+            if (typeof updatePageLanguage === 'function') {
+                updatePageLanguage();
+            }
             initializeThemeToggle();
         })
         .catch(error => console.error('Error loading navbar:', error));
@@ -10,6 +16,9 @@ function loadComponents() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('footer-container').innerHTML = data;
+            if (typeof updatePageLanguage === 'function') {
+                updatePageLanguage();
+            }
         })
         .catch(error => console.error('Error loading footer:', error));
 }

@@ -1,0 +1,72 @@
+{
+  "navbar": {
+    "home": "Anasayfa",
+    "about": "Hakkımda",
+    "projects": "Projelerim",
+    "blogs": "Yazılarım",
+    "contact": "İletişim"
+  },
+  "home": {
+    "heading": "Merhaba, Ben Yiğit Arda Kıdıman",
+    "subtitle": "Websiteme hoş geldiniz :D",
+    "aboutMe": "Hakkımda",
+    "learnMore": "Benim hakkımda daha fazla bilgi öğren",
+    "projects": "Projelerim",
+    "myWorks": "Benim çalışmalarım",
+    "blogs": "Yazılarım",
+    "myBlogPosts": "Blog yazılarım",
+    "contact": "İletişim",
+    "getInTouch": "Benimle iletişime geç",
+    "websiteTitle": "Bu Web Sitesi Hakkında",
+    "websiteDesc": "Bu, benim kişisel Websitem - projelerimi, blog yazılarımı sergilemek ve başkalarıyla bağlantı kurmak için kullandığım bir merkez."
+  },
+  "about": {
+    "heading": "Hakkımda & Deneyimlerim",
+    "subtitle": "Geçmiş, beceriler ve yolculuğum hakkında bilgi edinin.",
+    "whoAmI": "Ben Kimim?",
+    "whoAmIDesc": "Lise zamanından beri programlamaya ilgi duyan tutkulu bir öğrenci ve geliştiriciyim. Frontend ve backend teknolojilerinde güçlü bir temele sahip olup, fikirleri güzel ve işlevsel projelere dönüştürmeyi seviyorum.",
+    "myResume": "Özgeçmiş",
+    "education": "Eğitim & Deneyimler",
+    "ostim": "OSTIM Teknik Üniversitesi",
+    "softwareEng": "Yazılım Mühendisliği",
+    "duration": "2024 - Halen",
+    "skills": "Beceriler & Teknolojiler",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "tools": "Araçlar",
+    "interests": "İlgi Alanları & Hobiler",
+    "gaming": "Oyun",
+    "reading": "Okuma",
+    "music": "Müzik",
+    "backToHome": "← Anasayfaya Dön"
+  },
+  "projects": {
+    "heading": "Projelerim",
+    "checkGithub": "İncele ->",
+    "personalWebsite": "Kişisel Web Sitesi",
+    "personalWebsiteDesc": "HTML5, CSS3 ve vanilla JavaScript kullanılarak oluşturulmuş modern, responsive bir kişisel portföy web sitesi.",
+    "meyveKayit": "MeyveKayıt",
+    "meyveKayitDesc": "MeyveKayıt, bir meyve pazarında müşteri başına toplam meyve satın alma miktarını (kilogram cinsinden) izlemek için tasarlanan basit bir Python masaüstü uygulamasıdır. Uygulama tüm kayıtları bir dosyada depolar ve yeniden başlatıldığında otomatik olarak yeniden yükler.",
+    "oopATM": "OOP ATM",
+    "oopATMDesc": "Python Nesne Yönelimli Programlama (OOP) ilkeleri kullanılarak oluşturulmuş. Temel ATM işlemlerini OOP yapısı ile simüle eden konsol tabanlı bir uygulamadır.",
+    "bankingSystem": "Bankacılık Sistemi",
+    "comingSoon": "Çok Yakında...",
+    "backToHome": "← Anasayfaya Dön"
+  },
+  "blogs": {
+    "heading": "Yazılar",
+    "subtitle": "Yeni yazılar çok yakında geliyor...",
+    "backToHome": "← Anasayfaya Dön"
+  },
+  "contact": {
+    "heading": "Bağlantılar",
+    "subtitle": "Bana ulaşabileceğin adresler",
+    "email": "E-posta",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "backToHome": "← Anasayfaya Dön"
+  },
+  "footer": {
+    "copyright": "© 2026 Yiğit Arda Kıdıman. Tüm hakları saklıdır."
+  }
+}

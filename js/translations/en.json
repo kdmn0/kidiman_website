@@ -1,0 +1,72 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About Me",
+    "projects": "Projects",
+    "blogs": "Blogs",
+    "contact": "Contact"
+  },
+  "home": {
+    "heading": "Hi, I'm Yiğit Arda Kıdıman",
+    "subtitle": "Welcome to my personal workspace :D",
+    "aboutMe": "About me",
+    "learnMore": "Learn more about me",
+    "projects": "Projects",
+    "myWorks": "My own works",
+    "blogs": "Blogs",
+    "myBlogPosts": "My blog posts",
+    "contact": "Contact",
+    "getInTouch": "Get in touch with me",
+    "websiteTitle": "About This Website",
+    "websiteDesc": "This is my personal workspace - a hub for showcasing my projects, blogs and connecting with others."
+  },
+  "about": {
+    "heading": "About Me & Experiences",
+    "subtitle": "Learn about my background, skills and journey.",
+    "whoAmI": "Who Am I?",
+    "whoAmIDesc": "I'm a passionate student and developer who has been interested in coding since high school. With a growing foundation in both frontend and backend technologies, I enjoy turning ideas into beautiful and functional projects.",
+    "myResume": "My Resume",
+    "education": "Education & Experiences",
+    "ostim": "OSTIM Technical University",
+    "softwareEng": "Software Engineering",
+    "duration": "2024 - Present",
+    "skills": "Skills & Technologies",
+    "backend": "Backend",
+    "frontend": "Frontend",
+    "tools": "Tools",
+    "interests": "Interests & Hobbies",
+    "gaming": "Gaming",
+    "reading": "Reading",
+    "music": "Music",
+    "backToHome": "← Back to Home"
+  },
+  "projects": {
+    "heading": "Projects",
+    "checkGithub": "Check My",
+    "personalWebsite": "Personal Website",
+    "personalWebsiteDesc": "A modern, responsive personal portfolio website built with HTML5, CSS3, and vanilla JavaScript.",
+    "meyveKayit": "MeyveKayıt",
+    "meyveKayitDesc": "MeyveKayıt is a simple Python desktop application designed to track total fruit purchases (in kilograms) per customer in a fruit market. The application stores all records in a file and automatically reloads them when restarted.",
+    "oopATM": "OOP ATM",
+    "oopATMDesc": "Built using Python Object-Oriented Programming (OOP) principles. It is a console-based application that simulates basic ATM operations with an OOP structure.",
+    "bankingSystem": "Banking System",
+    "comingSoon": "Coming Soon...",
+    "backToHome": "← Back to Home"
+  },
+  "blogs": {
+    "heading": "Blogs",
+    "subtitle": "New Blogs are Coming Soon...",
+    "backToHome": "← Back to Home"
+  },
+  "contact": {
+    "heading": "Connections",
+    "subtitle": "Addresses which you can reach me",
+    "email": "E-mail",
+    "linkedin": "LinkedIn",
+    "instagram": "Instagram",
+    "backToHome": "← Back to Home"
+  },
+  "footer": {
+    "copyright": "© 2026 Yiğit Arda Kıdıman. All rights reserved."
+  }
+}

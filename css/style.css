@@ -346,74 +346,74 @@ a {
 }
 
 .dark-mode-btn {
-  position: fixed;
-  bottom: 40px;
-  right: 20px;
-  
-  padding: 12px 15px;
-  background-color: #1a1a1a;
-  color: white;
-  border-radius: 50%; 
-  cursor: pointer;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+
+    padding: 12px 15px;
+    background-color: #1a1a1a;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
 .dark-mode-btn:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #theme-toggle i.bi-sun-fill {
-  color: #1a1a1a;
+    color: #1a1a1a;
 }
 
 nav select {
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
-  padding: 0.5rem 0.5rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 0.5rem 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
 }
 
 nav select:hover {
-  border-color: var(--primary-color);
-  box-shadow: 0 0 8px rgba(0, 211, 56, 0.3);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 8px rgba(0, 211, 56, 0.3);
 }
 
 nav select:focus {
-  outline: none;
-  border-color: var(--primary-color);
-  box-shadow: 0 0 12px rgba(0, 211, 56, 0.5);
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 12px rgba(0, 211, 56, 0.5);
 }
 
 body.light-mode nav select {
-  background-color: var(--bg-secondary);
-  color: var(--text-primary);
-  border: 1px solid #00d338;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid #00d338;
 }
 
 body.dark-theme {
-  background-color: #121212;
-  color: #ffffff;
+    background-color: #121212;
+    color: #ffffff;
 }
 
 /* Mobil responsive ayarları */
 @media (max-width: 768px) {
-  .dark-mode-btn {
-    bottom: 20px;
-    left: auto;
-    right: 20px;
-    padding: 10px 12px;
-  }
-  
-  .page-hero h1 {
-    font-size: 2rem;
-  }
-  
-  section {
-    padding: 0 1rem;
-  }
+    .dark-mode-btn {
+        bottom: 20px;
+        left: auto;
+        right: 20px;
+        padding: 10px 12px;
+    }
+
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 0 1rem;
+    }
 }
