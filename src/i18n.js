@@ -62,7 +62,10 @@ const resources = {
           "Typescript": "Typescript",
           "Python": "Python",
           "FileManagement": "File Management",
-          "OOP": "OOP"
+          "OOP": "OOP",
+          "React": "React",
+          "Tailwind": "Tailwind",
+          "Vite": "Vite"
         }
       },
       "contact": {
@@ -137,7 +140,10 @@ const resources = {
           "Typescript": "Typescript",
           "Python": "Python",
           "FileManagement": "Dosya Yönetimi",
-          "OOP": "OOP"
+          "OOP": "OOP",
+          "React": "React",
+          "Tailwind": "Tailwind",
+          "Vite": "Vite"
         }
       },
       "contact": {
