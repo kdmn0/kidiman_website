@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply bg-primary-light text-textMain-light dark:bg-primary-dark dark:text-textMain-dark transition-colors duration-300 antialiased font-sans;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-brandHover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand transition-all duration-200 cursor-pointer;
+  }
+  .btn-outline {
+    @apply inline-flex items-center justify-center rounded-lg border-2 border-brand px-6 py-3 text-sm font-semibold text-brand hover:bg-brand hover:text-white transition-all duration-200 cursor-pointer dark:border-brand dark:text-brand dark:hover:bg-brand dark:hover:text-white;
+  }
+  .card-base {
+    @apply bg-card-light dark:bg-card-dark rounded-2xl shadow-sm border border-secondary-light dark:border-secondary-dark p-6 transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+  }
+  .nav-link {
+    @apply text-textMuted-light hover:text-brand dark:text-textMuted-dark dark:hover:text-brand font-medium transition-colors;
+  }
+  .nav-link.active {
+    @apply text-brand dark:text-brand font-bold;
+  }
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary-light dark:bg-secondary-dark rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-textMuted-light dark:bg-textMuted-dark;
+}
