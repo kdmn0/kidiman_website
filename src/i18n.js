@@ -44,7 +44,7 @@ const resources = {
       "projects": {
         "heading": "Projects",
         "personalWebsite": "Personal Website",
-        "personalWebsiteDesc": "A modern, responsive personal portfolio website built with HTML5, CSS3, and vanilla JavaScript.",
+        "personalWebsiteDesc": "A modern, responsive personal portfolio website built with React, Tailwind CSS, and Vite.",
         "meyveKayit": "MeyveKayıt",
         "meyveKayitDesc": "MeyveKayıt is a simple Python desktop application designed to track total fruit purchases (in kilograms) per customer in a fruit market. The application stores all records in a file and automatically reloads them when restarted.",
         "kidimusic_generator": "KıdıMusic Generator",
@@ -122,7 +122,7 @@ const resources = {
       "projects": {
         "heading": "Projeler",
         "personalWebsite": "Kişisel Web Sitesi",
-        "personalWebsiteDesc": "HTML5, CSS3 ve vanilla JavaScript ile oluşturulmuş modern, duyarlı bir kişisel portföy web sitesi.",
+        "personalWebsiteDesc": "React, Tailwind CSS ve Vite ile oluşturulmuş modern, duyarlı bir kişisel portföy web sitesi.",
         "meyveKayit": "MeyveKayıt",
         "meyveKayitDesc": "MeyveKayıt, bir meyve pazarındaki müşteri başına toplam meyve alımlarını (kilogram cinsinden) takip etmek için tasarlanmış basit bir Python masaüstü uygulamasıdır.",
         "kidimusic_generator": "KıdıMusic Generator",
