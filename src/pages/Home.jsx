@@ -14,7 +14,7 @@ export default function Home() {
       </div>
 
       {/* Hero Text */}
-      <div className="w-full md:w-1/2 md:ml-auto flex flex-col items-center md:items-start text-center md:text-left space-y-6 z-10 px-4 pointer-events-none">
+      <div className="w-full md:w-1/2 md:ml-auto flex flex-col items-center md:items-start text-center md:text-left space-y-6 z-10 px-4 pointer-events-none mb-auto mt-32 md:mb-0 md:mt-0">
         <motion.h1
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}

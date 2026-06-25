@@ -152,12 +152,30 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false, anchorX = 0 }) {
     ctx.textAlign = "center";
 
     // Yazının x konumu: resmin tam ortası
-    const textX = offsetX + drawWidth / 3.5;
+    const textX = offsetX + drawWidth / 5;
     // Yazının y konumu: resmin alt sınırından 50 piksel aşağısı
     const textY = offsetY + drawHeight + 30;
 
     // Buradaki "Yiğit Arda Kıdıman" yazısını istediğiniz gibi değiştirebilirsiniz
     ctx.fillText("JustKıdı", textX, textY);
+
+    // KARTIN ARKA YÜZÜNE ÇAPRAZ YAZI EKLEME
+    ctx.save();
+    // Arka yüzün merkezi: Sağ yarının ortası
+    const backCenterX = (canvas.width / 4) * 3; 
+    // Yazıyı biraz daha yukarı almak için merkezden 50 piksel çıkarıyoruz
+    const backCenterY = (canvas.height / 2) - 50;
+    
+    ctx.translate(backCenterX, backCenterY);
+    // Yazıyı çapraz yapmak için yaklaşık 35 derece (-Math.PI / 5) döndürüyoruz
+    ctx.rotate(-Math.PI / 5); 
+    
+    ctx.fillStyle = "rgba(255, 255, 255, 0.3)"; // Hafif transparan ve silik beyaz
+    ctx.font = "bold 30px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText("Bug değil, feature", 0, 0);
+    ctx.restore();
 
     const tex = new THREE.CanvasTexture(canvas);
     tex.flipY = false;
@@ -274,7 +292,7 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false, anchorX = 0 }) {
 
   return (
     <>
-      <group position={[anchorX, 4, 0]}>
+      <group position={[isMobile ? 0 : anchorX, 4, 0]}>
         <RigidBody ref={fixed} {...segmentProps} type={"fixed"} />
         <RigidBody
           position={[0.5, 0, 0]}
