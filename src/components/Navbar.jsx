@@ -1,6 +1,5 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
-import ThemeToggle from './ThemeToggle';
 import LanguageToggle from './LanguageToggle';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
@@ -79,7 +78,6 @@ export default function Navbar() {
 
           <div className="md:hidden flex items-center gap-4">
             <LanguageToggle />
-            <ThemeToggle />
             <button onClick={() => setIsOpen(!isOpen)} className="text-textMain-light dark:text-textMain-dark">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>

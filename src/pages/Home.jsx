@@ -10,7 +10,7 @@ export default function Home() {
 
       {/* 3D Lanyard Component */}
       <div className="absolute inset-0 w-full h-full z-0">
-        <Lanyard position={[0, 0, 13]} fov={25} anchorX={-2.25} />
+        <Lanyard position={[0, 0, 11]} fov={25} anchorX={-2.25} />
       </div>
 
       {/* Hero Text */}
