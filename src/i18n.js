@@ -23,19 +23,25 @@ const resources = {
         "contact": "Contact"
       },
       "about": {
-        "heading": "About Me & Experiences",
+        "heading": "About Me",
         "subtitle": "Learn about my background, skills and journey.",
         "whoAmI": "Who Am I?",
         "whoAmIDesc": "I'm a passionate student and developer who has been interested in coding since high school. With a growing foundation in both frontend and backend technologies, I enjoy turning ideas into beautiful and functional projects.",
         "myResume": "My Resume",
-        "education": "Education & Experiences",
+        "education": "Education",
         "ostim": "OSTIM Technical University",
         "softwareEng": "Software Engineering",
         "duration": "2024 - Present",
+        "experience": "Experience",
+        "workPlace1": "Volinor Savunma ve Teknoloji A.Ş.",
+        "workRole1": "Full Stack Developer Intern",
+        "workDuration1": "06/2026 - 07/2026 | Ankara",
+        "workDesc1": "Designed and deployed 11 custom Django REST API endpoints (3D model management, product catalog, authentication, email service, system health monitoring) integrated with React and Three.js frontend.",
         "skills": "Skills & Technologies",
         "backend": "Backend",
         "frontend": "Frontend",
         "tools": "Tools",
+        "programmingLanguages": "Programming Languages",
         "interests": "Interests & Hobbies",
         "gaming": "Gaming",
         "reading": "Reading",
@@ -101,19 +107,25 @@ const resources = {
         "contact": "İletişim"
       },
       "about": {
-        "heading": "Hakkımda ve Deneyimlerim",
+        "heading": "Hakkımda",
         "subtitle": "Geçmişim, yeteneklerim ve yolculuğum hakkında bilgi edinin.",
         "whoAmI": "Ben Kimim?",
         "whoAmIDesc": "Liseden beri kodlamaya ilgi duyan tutkulu bir öğrenci ve geliştiriciyim. Hem frontend hem de backend teknolojilerinde gelişen temelimle fikirleri güzel ve işlevsel projelere dönüştürmekten keyif alıyorum.",
         "myResume": "Özgeçmişim",
-        "education": "Eğitim ve Deneyimler",
+        "education": "Eğitim",
         "ostim": "OSTİM Teknik Üniversitesi",
         "softwareEng": "Yazılım Mühendisliği",
         "duration": "2024 - Günümüz",
+        "experience": "Deneyim",
+        "workPlace1": "Volinor Savunma ve Teknoloji A.Ş.",
+        "workRole1": "Full Stack Developer Stajyeri",
+        "workDuration1": "06/2026 - 07/2026 | Ankara",
+        "workDesc1": "React ve Three.js arayüzüyle entegre edilmiş 11 özel Django REST API uç noktası (3D model yönetimi, ürün kataloğu, kimlik doğrulama, e-posta servisi, sistem sağlık izleme) tasarlandı ve devreye alındı.",
         "skills": "Yetenekler & Teknolojiler",
         "backend": "Backend",
         "frontend": "Frontend",
         "tools": "Araçlar",
+        "programmingLanguages": "Programlama Dilleri",
         "interests": "İlgi Alanları & Hobiler",
         "gaming": "Oyun",
         "reading": "Okuma",
@@ -147,7 +159,7 @@ const resources = {
         }
       },
       "contact": {
-        "heading": "Bağlantılar",
+        "heading": "İletişim",
         "subtitle": "Bana ulaşabileceğiniz adresler",
         "email": "E-posta",
         "linkedin": "LinkedIn",
@@ -164,8 +176,8 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "en", // default language
-    fallbackLng: "en",
+    lng: "tr", // default language
+    fallbackLng: "tr",
     interpolation: {
       escapeValue: false
     }

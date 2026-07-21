@@ -9,25 +9,25 @@ html {
 
 @layer base {
   body {
-    @apply bg-primary-light text-textMain-light dark:bg-primary-dark dark:text-textMain-dark transition-colors duration-300 antialiased font-sans;
+    @apply bg-primary text-textMain transition-colors duration-300 antialiased font-sans;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-brandHover focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand transition-all duration-200 cursor-pointer;
+    @apply inline-flex items-center justify-center rounded-lg bg-brand px-6 py-3 text-sm font-semibold text-white shadow-[0_0_15px_rgba(99,102,241,0.4)] hover:bg-brandHover hover:shadow-[0_0_25px_rgba(99,102,241,0.6)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand transition-all duration-200 cursor-pointer;
   }
   .btn-outline {
-    @apply inline-flex items-center justify-center rounded-lg border-2 border-brand px-6 py-3 text-sm font-semibold text-brand hover:bg-brand hover:text-white transition-all duration-200 cursor-pointer dark:border-brand dark:text-brand dark:hover:bg-brand dark:hover:text-white;
+    @apply inline-flex items-center justify-center rounded-lg border-2 border-brand/50 backdrop-blur-md px-6 py-3 text-sm font-semibold text-brand hover:bg-brand hover:text-white transition-all duration-200 cursor-pointer;
   }
   .card-base {
-    @apply bg-card-light dark:bg-card-dark rounded-2xl shadow-sm border border-secondary-light dark:border-secondary-dark p-6 transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+    @apply bg-black/40 backdrop-blur-xl rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] border border-white/10 p-6 transition-all duration-300 hover:shadow-[0_8px_32px_0_rgba(99,102,241,0.1)] hover:border-brand/30 hover:-translate-y-1;
   }
   .nav-link {
-    @apply text-textMuted-light hover:text-brand dark:text-textMuted-dark dark:hover:text-brand font-medium transition-colors;
+    @apply text-textMuted hover:text-brand font-medium transition-colors;
   }
   .nav-link.active {
-    @apply text-brand dark:text-brand font-bold;
+    @apply text-brand font-bold;
   }
 }
 
@@ -39,8 +39,15 @@ html {
   @apply bg-transparent;
 }
 ::-webkit-scrollbar-thumb {
-  @apply bg-secondary-light dark:bg-secondary-dark rounded-full;
+  @apply bg-secondary rounded-full;
 }
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-textMuted-light dark:bg-textMuted-dark;
+  @apply bg-textMuted;
+}
+
+/* Hide default cursor on desktop since we have a custom one */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
 }

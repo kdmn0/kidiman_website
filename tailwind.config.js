@@ -4,7 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
-  darkMode: 'class',
+
   theme: {
     extend: {
       fontFamily: {
@@ -12,28 +12,13 @@ export default {
         archivo: ['"Archivo"', 'sans-serif'],
       },
       colors: {
-        primary: {
-          light: '#FAFAFA',
-          dark: '#09090B',
-        },
-        secondary: {
-          light: '#E4E4E7',
-          dark: '#18181B',
-        },
-        card: {
-          light: '#FFFFFF',
-          dark: '#27272A',
-        },
-        textMain: {
-          light: '#09090B',
-          dark: '#FAFAFA',
-        },
-        textMuted: {
-          light: '#3F3F46',
-          dark: '#A1A1AA',
-        },
-        brand: '#2563EB',
-        brandHover: '#1D4ED8',
+        primary: '#09090B',
+        secondary: '#18181B',
+        card: '#27272A',
+        textMain: '#FAFAFA',
+        textMuted: '#A1A1AA',
+        brand: '#6366f1',
+        brandHover: '#4f46e5',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
