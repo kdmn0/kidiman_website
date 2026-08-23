@@ -19,8 +19,6 @@ import {
 import { MeshLineGeometry, MeshLineMaterial } from "meshline";
 import * as THREE from "three";
 
-import cardGLB from "./card.glb";
-
 extend({ MeshLineGeometry, MeshLineMaterial });
 
 export default function Lanyard({
@@ -112,7 +110,7 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false, anchorX = 0 }) {
  linearDamping: 4,
  };
 
- const { nodes, materials } = useGLTF(cardGLB);
+ const { nodes, materials } = useGLTF("/models/card.glb");
  const baseTexture = useTexture("/img/resim1.png");
  const frontTexture = useMemo(() => {
  const canvas = document.createElement("canvas");
@@ -377,3 +375,5 @@ function Band({ maxSpeed = 50, minSpeed = 0, isMobile = false, anchorX = 0 }) {
  </>
  );
 }
+
+useGLTF.preload("/models/card.glb");
