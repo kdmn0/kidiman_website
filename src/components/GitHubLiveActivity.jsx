@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { FaGithub } from 'react-icons/fa';
 import { ExternalLink, CalendarDays } from 'lucide-react';
@@ -9,7 +9,6 @@ export default function GitHubLiveActivity() {
   const [contributionsData, setContributionsData] = useState(null);
   const [hoveredDay, setHoveredDay] = useState(null);
   const [loading, setLoading] = useState(true);
-  const scrollContainerRef = useRef(null);
 
   useEffect(() => {
     async function fetchGitHubData() {
@@ -38,17 +37,6 @@ export default function GitHubLiveActivity() {
     fetchGitHubData();
   }, []);
 
-  // Auto-scroll to current date (right side) on mobile and initial load
-  useEffect(() => {
-    if (scrollContainerRef.current && contributionsData) {
-      const container = scrollContainerRef.current;
-      // Slight delay to ensure DOM is fully rendered
-      requestAnimationFrame(() => {
-        container.scrollLeft = container.scrollWidth;
-      });
-    }
-  }, [contributionsData]);
-
   // Group contributions into 7-day columns (weeks)
   const weeks = [];
   if (contributionsData?.contributions) {
@@ -63,24 +51,24 @@ export default function GitHubLiveActivity() {
       case 1:
         return 'bg-[#0e4429] border-[#006d32]/40 hover:bg-[#006d32]';
       case 2:
-        return 'bg-[#006d32] border-[#26a641]/40 hover:bg-[#26a641]';
+        return 'bg-[#006d32] border-[#26a641]/50 hover:bg-[#26a641]';
       case 3:
-        return 'bg-[#26a641] border-[#39d353]/50 hover:bg-[#39d353] shadow-[0_0_4px_rgba(38,166,65,0.4)]';
+        return 'bg-[#26a641] border-[#39d353]/60 hover:bg-[#39d353] shadow-[0_0_4px_rgba(38,166,65,0.4)]';
       case 4:
-        return 'bg-[#39d353] border-white/50 hover:bg-[#56e36d] shadow-[0_0_8px_rgba(57,211,83,0.6)]';
+        return 'bg-[#39d353] border-white/60 hover:bg-[#56e36d] shadow-[0_0_8px_rgba(57,211,83,0.6)]';
       default:
-        return 'bg-[#161b22]/90 border-white/5 hover:bg-[#21262d]';
+        return 'bg-[#161b22]/90 border-white/[0.04] hover:bg-[#21262d]';
     }
   };
 
   return (
-    <div className="card-base p-4 sm:p-5 relative overflow-hidden bg-black/40 backdrop-blur-xl border border-white/10 hover:border-brand/30 transition-all duration-300 mb-8 group">
+    <div className="card-base p-3.5 sm:p-5 relative overflow-hidden bg-black/40 backdrop-blur-xl border border-white/10 hover:border-brand/30 transition-all duration-300 mb-8 group">
       {/* Header Bar */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-3.5 border-b border-white/5 text-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-3 pb-3 border-b border-white/5 text-xs">
         {/* Profile Info */}
         <div className="flex items-center justify-between w-full sm:w-auto">
-          <div className="flex items-center gap-2.5">
-            <FaGithub className="text-xl sm:text-lg text-textMain group-hover:text-brand transition-colors shrink-0" />
+          <div className="flex items-center gap-2">
+            <FaGithub className="text-lg sm:text-base text-textMain group-hover:text-brand transition-colors shrink-0" />
             <a
               href="https://github.com/yigitardakidiman"
               target="_blank"
@@ -108,10 +96,10 @@ export default function GitHubLiveActivity() {
         </div>
 
         {/* Stats & Action on sm+ */}
-        <div className="flex items-center justify-between sm:justify-end gap-3 text-textMuted w-full sm:w-auto">
+        <div className="flex items-center justify-between sm:justify-end gap-2.5 sm:gap-3 text-textMuted w-full sm:w-auto">
           {contributionsData?.total?.lastYear !== undefined && (
-            <span className="text-textMain font-medium flex items-center gap-1.5 text-[11px] sm:text-xs bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded-full text-emerald-400 whitespace-nowrap">
-              <CalendarDays size={13} className="text-emerald-400 shrink-0" />
+            <span className="text-textMain font-medium flex items-center gap-1.5 text-[11px] sm:text-xs bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 sm:py-1 rounded-full text-emerald-400 whitespace-nowrap">
+              <CalendarDays size={12} className="text-emerald-400 shrink-0" />
               <span>{t('github.contributionsYear', { count: contributionsData.total.lastYear })}</span>
             </span>
           )}
@@ -137,41 +125,36 @@ export default function GitHubLiveActivity() {
       {/* Heatmap Section */}
       <div className="pt-3">
         {loading ? (
-          <div className="h-28 bg-white/5 rounded-xl animate-pulse flex items-center justify-center text-xs text-textMuted">
+          <div className="h-20 sm:h-28 bg-white/5 rounded-xl animate-pulse flex items-center justify-center text-xs text-textMuted">
             {t('github.loading')}
           </div>
         ) : (
-          <div className="space-y-3">
-            {/* Scrollable Heatmap Grid */}
-            <div
-              ref={scrollContainerRef}
-              className="w-full overflow-x-auto pb-2 pt-1 scrollbar-custom select-none touch-pan-x"
-            >
-              <div className="flex gap-[3px] sm:gap-[3.5px] min-w-max pb-1 sm:justify-center">
-                {weeks.map((week, wIndex) => (
-                  <div key={wIndex} className="flex flex-col gap-[3px] sm:gap-[3.5px]">
-                    {week.map((day, dIndex) => (
-                      <button
-                        key={dIndex}
-                        type="button"
-                        onClick={() => setHoveredDay(hoveredDay?.date === day.date ? null : day)}
-                        onMouseEnter={() => setHoveredDay(day)}
-                        onMouseLeave={() => setHoveredDay(null)}
-                        className={`w-[10px] h-[10px] sm:w-[11px] sm:h-[11px] rounded-[2px] border transition-all duration-150 cursor-pointer focus:outline-none focus:ring-1 focus:ring-emerald-400 ${getLevelColor(day.level)}`}
-                        title={t('github.contributionsCount', { count: day.count, date: day.date })}
-                        aria-label={t('github.contributionsCount', { count: day.count, date: day.date })}
-                      />
-                    ))}
-                  </div>
-                ))}
-              </div>
+          <div className="space-y-2.5 sm:space-y-3">
+            {/* Fluid Heatmap Grid - 100% visible on all screen sizes */}
+            <div className="w-full flex justify-between gap-[1px] xs:gap-[1.5px] sm:gap-[2.5px] md:gap-[3px] select-none py-1">
+              {weeks.map((week, wIndex) => (
+                <div key={wIndex} className="flex flex-col flex-1 gap-[1px] xs:gap-[1.5px] sm:gap-[2.5px] md:gap-[3px]">
+                  {week.map((day, dIndex) => (
+                    <button
+                      key={dIndex}
+                      type="button"
+                      onClick={() => setHoveredDay(hoveredDay?.date === day.date ? null : day)}
+                      onMouseEnter={() => setHoveredDay(day)}
+                      onMouseLeave={() => setHoveredDay(null)}
+                      className={`w-full aspect-square rounded-[1px] sm:rounded-[2px] border-[0.5px] sm:border transition-all duration-150 cursor-pointer focus:outline-none focus:ring-1 focus:ring-emerald-400 ${getLevelColor(day.level)}`}
+                      title={t('github.contributionsCount', { count: day.count, date: day.date })}
+                      aria-label={t('github.contributionsCount', { count: day.count, date: day.date })}
+                    />
+                  ))}
+                </div>
+              ))}
             </div>
 
-            {/* Bottom Status / Legend Bar (Static & Always visible) */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 pt-2 border-t border-white/5 text-[11px] text-textMuted font-mono">
-              <div className="min-h-[1.5rem] flex items-center">
+            {/* Bottom Status / Legend Bar */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1.5 sm:gap-2 pt-2 border-t border-white/5 text-[11px] text-textMuted font-mono">
+              <div className="min-h-[1.25rem] sm:min-h-[1.5rem] flex items-center">
                 {hoveredDay ? (
-                  <span className="text-emerald-400 font-medium bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 text-[11px]">
+                  <span className="text-emerald-400 font-medium bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 text-[10px] sm:text-[11px]">
                     {t('github.contributionsCount', { count: hoveredDay.count, date: hoveredDay.date })}
                   </span>
                 ) : (
@@ -184,11 +167,11 @@ export default function GitHubLiveActivity() {
               <div className="flex items-center gap-1.5 text-[10px] text-textMuted/70 self-end sm:self-auto shrink-0">
                 <span>{t('github.less')}</span>
                 <div className="flex gap-1 items-center">
-                  <div className="w-2.5 h-2.5 rounded-[2px] bg-[#161b22] border border-white/5"></div>
-                  <div className="w-2.5 h-2.5 rounded-[2px] bg-[#0e4429]"></div>
-                  <div className="w-2.5 h-2.5 rounded-[2px] bg-[#006d32]"></div>
-                  <div className="w-2.5 h-2.5 rounded-[2px] bg-[#26a641]"></div>
-                  <div className="w-2.5 h-2.5 rounded-[2px] bg-[#39d353]"></div>
+                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-[1px] sm:rounded-[2px] bg-[#161b22] border border-white/5"></div>
+                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-[1px] sm:rounded-[2px] bg-[#0e4429]"></div>
+                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-[1px] sm:rounded-[2px] bg-[#006d32]"></div>
+                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-[1px] sm:rounded-[2px] bg-[#26a641]"></div>
+                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-[1px] sm:rounded-[2px] bg-[#39d353]"></div>
                 </div>
                 <span>{t('github.more')}</span>
               </div>
