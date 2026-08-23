@@ -17,8 +17,8 @@ export default {
         card: '#27272A',
         textMain: '#FAFAFA',
         textMuted: '#A1A1AA',
-        brand: '#6366f1',
-        brandHover: '#4f46e5',
+        brand: '#2563EB',
+        brandHover: '#1d4ed8',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',
