@@ -7,20 +7,30 @@ const resources = {
       "home": {
         "heading": "Hi, I'm Yiğit Arda Kıdıman",
         "subtitle": "Passionate Student and Developer...",
-        "aboutMe": "About me",
-        "learnMore": "Learn more about me",
-        "projects": "Projects",
-        "myWorks": "My own works",
-        "contact": "Contact",
-        "getInTouch": "Get in touch with me",
-        "websiteTitle": "About This Website",
-        "websiteDesc": "This is my personal workspace - a hub for showcasing my projects, blogs and connecting with others."
+        "exploreProjects": "Explore Projects",
+        "aboutMe": "About Me",
+        "viewGallery": "View Gallery",
+        "getInTouch": "Get in Touch",
+        "aboutMore": "More About Me",
+        "allProjects": "View All Projects",
+        "allGallery": "View Full Gallery",
+        "allContact": "Contact Details",
+        "projectsHeading": "Featured Projects",
+        "projectsSubtitle": "A selection of recent works and open source projects I've built.",
+        "contactHeading": "Get in Touch",
+        "contactSubtitle": "Feel free to reach out for collaborations, questions, or just to say hi.",
+        "contactPageBtn": "Go to Contact Page"
       },
       "nav": {
         "home": "Home",
         "about": "About",
         "projects": "Projects",
+        "gallery": "Gallery",
         "contact": "Contact"
+      },
+      "gallery": {
+        "heading": "Gallery",
+        "subtitle": "Moments, events, and memories."
       },
       "about": {
         "heading": "About Me",
@@ -33,56 +43,83 @@ const resources = {
         "softwareEng": "Software Engineering",
         "duration": "2024 - Present",
         "experience": "Experience",
-        "workPlace1": "Volinor Savunma ve Teknoloji A.Ş.",
-        "workRole1": "Full Stack Developer Intern",
-        "workDuration1": "06/2026 - 07/2026 | Ankara",
-        "workDesc1": "Designed and deployed 11 custom Django REST API endpoints (3D model management, product catalog, authentication, email service, system health monitoring) integrated with React and Three.js frontend.",
+        "workPlace1": "Volinor Defense & Tech Inc.",
+        "workRole1": "Software Developer",
+        "workType1": "Part-time",
+        "workDuration1": "07/2026 - Present",
+        "workRole2": "Software Engineering Intern",
+        "workType2": "Intern",
+        "workDuration2": "06/2026 - 07/2026 | Ankara",
         "skills": "Skills & Technologies",
         "backend": "Backend",
         "frontend": "Frontend",
         "tools": "Tools",
-        "programmingLanguages": "Programming Languages",
-        "interests": "Interests & Hobbies",
-        "gaming": "Gaming",
-        "reading": "Reading",
-        "music": "Music"
+        "programmingLanguages": "Programming Languages"
       },
       "projects": {
         "heading": "Projects",
-        "personalWebsite": "Personal Website",
-        "personalWebsiteDesc": "A modern, responsive personal portfolio website built with React, Tailwind CSS, and Vite.",
-        "meyveKayit": "MeyveKayıt",
-        "meyveKayitDesc": "MeyveKayıt is a simple Python desktop application designed to track total fruit purchases (in kilograms) per customer in a fruit market. The application stores all records in a file and automatically reloads them when restarted.",
+        "volinor": "Volinor Defense Website",
+        "volinorDesc": "Corporate web platform built for Volinor Defense featuring React, Three.js 3D model visualization, and Django REST API integration.",
         "kidimusic_generator": "KıdıMusic Generator",
-        "kidimusic_generatorDesc": "Generate music tracks from prompts and export audio with a simple web UI.",
-        "oopATM": "OOP ATM",
-        "oopATMDesc": "Built using Python Object-Oriented Programming (OOP) principles. It is a console-based application that simulates basic ATM operations with an OOP structure.",
-        "bankingSystem": "Simple Banking System",
-        "bankingSystemDesc": "A console-based banking application built with Python using Object-Oriented Programming (OOP) principles and basic Data Structures.",
+        "kidimusic_generatorDesc": "A web application that generates custom music tracks from text prompts and allows easy audio export.",
+        "gitfetch_generator": "GitFetch README Generator",
+        "gitfetch_generatorDesc": "A modern web application to generate stylish and interactive GitHub profile READMEs easily.",
         "comingSoon": "Coming Soon...",
         "liveDemo": "Live Demo",
         "tags": {
-          "HTML": "HTML",
+          "React": "React",
+          "ThreeJS": "Three.js",
+          "Django": "Django",
           "CSS": "CSS",
           "JavaScript": "JavaScript",
           "Typescript": "Typescript",
           "Python": "Python",
+          "Tailwind": "Tailwind CSS",
           "FileManagement": "File Management",
-          "OOP": "OOP",
-          "React": "React",
-          "Tailwind": "Tailwind",
-          "Vite": "Vite"
+          "OOP": "OOP"
+        },
+        "badges": {
+          "openSource": "Open Source"
         }
       },
       "contact": {
         "heading": "Connections",
-        "subtitle": "Addresses which you can reach me",
+        "subtitle": "Addresses where you can reach me",
         "email": "E-mail",
         "linkedin": "LinkedIn",
-        "instagram": "Instagram"
+        "instagram": "Instagram",
+        "copied": "Copied to clipboard!"
       },
-      "common": {
-        "backToHome": "← Back to Home"
+      "spotify": {
+        "nowPlaying": "Listening on Spotify",
+        "recentlyPlayed": "Recently Played on Spotify",
+        "offline": "Not listening to Spotify right now",
+        "loading": "Loading...",
+        "listen": "Listen",
+        "recent": "Recent",
+        "title": "What I'm Listening To",
+        "live": "LIVE"
+      },
+      "github": {
+        "liveActivity": "Live GitHub Activity",
+        "publicRepos": "Public Repos",
+        "followers": "Followers",
+        "latestPushed": "Latest Push",
+        "recentRepos": "Latest Active Repositories",
+        "viewProfile": "View Profile",
+        "viewRepo": "View Repo",
+        "featuredProjects": "Featured Projects",
+        "contributionsYear": "{{count}} contributions in the last year",
+        "contributionsCount": "{{count}} contributions on {{date}}",
+        "hoverHint": "Hover over squares to see details",
+        "less": "Less",
+        "more": "More",
+        "publicRepoDesc": "Public repository",
+        "updated": "Updated",
+        "justNow": "Just now",
+        "hoursAgo": "hours ago",
+        "daysAgo": "days ago",
+        "loading": "Loading GitHub activity..."
       }
     }
   },
@@ -91,20 +128,30 @@ const resources = {
       "home": {
         "heading": "Merhaba, Ben Yiğit Arda Kıdıman",
         "subtitle": "Tutkulu bir öğrenci ve geliştirici...",
+        "exploreProjects": "Projeleri İncele",
         "aboutMe": "Hakkımda",
-        "learnMore": "Benim hakkımda daha fazla bilgi edinin",
-        "projects": "Projeler",
-        "myWorks": "Kendi çalışmalarım",
-        "contact": "İletişim",
-        "getInTouch": "Benimle iletişime geçin",
-        "websiteTitle": "Bu Web Sitesi Hakkında",
-        "websiteDesc": "Burası benim kişisel çalışma alanım; projelerimi, bloglarımı sergilediğim ve başkalarıyla bağlantı kurduğum bir merkez."
+        "viewGallery": "Galeriyi Gör",
+        "getInTouch": "İletişime Geç",
+        "aboutMore": "Hakkımda Daha Fazlası",
+        "allProjects": "Tüm Projeleri Gör",
+        "allGallery": "Tüm Galeriyi Gör",
+        "allContact": "İletişim Detayları",
+        "projectsHeading": "Öne Çıkan Projeler",
+        "projectsSubtitle": "Geliştirdiğim güncel çalışmalar ve açık kaynaklı projeler.",
+        "contactHeading": "Bana Ulaşın",
+        "contactSubtitle": "Projeleriniz, iş birliği teklifleriniz veya sorularınız için bana dilediğiniz zaman ulaşabilirsiniz.",
+        "contactPageBtn": "İletişim Sayfasına Git"
       },
       "nav": {
         "home": "Ana Sayfa",
-        "about": "Hakkında",
+        "about": "Hakkımda",
         "projects": "Projeler",
+        "gallery": "Galeri",
         "contact": "İletişim"
+      },
+      "gallery": {
+        "heading": "Galeri",
+        "subtitle": "Anlar, etkinlikler ve anılar."
       },
       "about": {
         "heading": "Hakkımda",
@@ -118,44 +165,42 @@ const resources = {
         "duration": "2024 - Günümüz",
         "experience": "Deneyim",
         "workPlace1": "Volinor Savunma ve Teknoloji A.Ş.",
-        "workRole1": "Full Stack Developer Stajyeri",
-        "workDuration1": "06/2026 - 07/2026 | Ankara",
-        "workDesc1": "React ve Three.js arayüzüyle entegre edilmiş 11 özel Django REST API uç noktası (3D model yönetimi, ürün kataloğu, kimlik doğrulama, e-posta servisi, sistem sağlık izleme) tasarlandı ve devreye alındı.",
+        "workRole1": "Software Developer",
+        "workType1": "Yarı zamanlı",
+        "workDuration1": "Tem 2026 - Günümüz",
+        "workRole2": "Yazılım Mühendisliği Stajyeri",
+        "workType2": "Stajyer",
+        "workDuration2": "Haz 2026 - 1 ay | Ankara",
         "skills": "Yetenekler & Teknolojiler",
         "backend": "Backend",
         "frontend": "Frontend",
         "tools": "Araçlar",
-        "programmingLanguages": "Programlama Dilleri",
-        "interests": "İlgi Alanları & Hobiler",
-        "gaming": "Oyun",
-        "reading": "Okuma",
-        "music": "Müzik"
+        "programmingLanguages": "Programlama Dilleri"
       },
       "projects": {
         "heading": "Projeler",
-        "personalWebsite": "Kişisel Web Sitesi",
-        "personalWebsiteDesc": "React, Tailwind CSS ve Vite ile oluşturulmuş modern, duyarlı bir kişisel portföy web sitesi.",
-        "meyveKayit": "MeyveKayıt",
-        "meyveKayitDesc": "MeyveKayıt, bir meyve pazarındaki müşteri başına toplam meyve alımlarını (kilogram cinsinden) takip etmek için tasarlanmış basit bir Python masaüstü uygulamasıdır.",
+        "volinor": "Volinor Savunma Web Sitesi",
+        "volinorDesc": "Volinor Savunma ve Teknoloji için React, Three.js ve Django REST API entegrasyonuyla geliştirilmiş 3D model destekli kurumsal web platformu.",
         "kidimusic_generator": "KıdıMusic Generator",
-        "kidimusic_generatorDesc": "Basit bir web kullanıcı arayüzü ile istemlerden müzik parçaları oluşturun ve sesi dışa aktarın.",
-        "oopATM": "OOP ATM",
-        "oopATMDesc": "Python Nesne Yönelimli Programlama (OOP) prensipleri kullanılarak oluşturulmuştur. Temel ATM işlemlerini simüle eden konsol tabanlı bir uygulamadır.",
-        "bankingSystem": "Bankacılık Sistemi",
-        "bankingSystemDesc": "Nesne Yönelimli Programlama (OOP) prensipleri ve temel Veri Yapıları kullanılarak Python ile geliştirilmiş, konsol tabanlı bir bankacılık uygulaması.",
+        "kidimusic_generatorDesc": "Yapay zeka yönlendirmeleri (prompt) ile özgün müzik parçaları oluşturan ve ses dosyalarını dışa aktaran web uygulaması.",
+        "gitfetch_generator": "GitFetch README Generator",
+        "gitfetch_generatorDesc": "GitHub profiliniz için şık ve etkileşimli README dosyalarını kolayca oluşturmanızı sağlayan modern web uygulaması.",
         "comingSoon": "Çok Yakında...",
         "liveDemo": "Canlı Demo",
         "tags": {
-          "HTML": "HTML",
+          "React": "React",
+          "ThreeJS": "Three.js",
+          "Django": "Django",
           "CSS": "CSS",
           "JavaScript": "JavaScript",
           "Typescript": "Typescript",
           "Python": "Python",
+          "Tailwind": "Tailwind CSS",
           "FileManagement": "Dosya Yönetimi",
-          "OOP": "OOP",
-          "React": "React",
-          "Tailwind": "Tailwind",
-          "Vite": "Vite"
+          "OOP": "OOP"
+        },
+        "badges": {
+          "openSource": "Açık Kaynak"
         }
       },
       "contact": {
@@ -163,10 +208,39 @@ const resources = {
         "subtitle": "Bana ulaşabileceğiniz adresler",
         "email": "E-posta",
         "linkedin": "LinkedIn",
-        "instagram": "Instagram"
+        "instagram": "Instagram",
+        "copied": "Panoya kopyalandı!"
       },
-      "common": {
-        "backToHome": "← Ana Sayfaya Dön"
+      "spotify": {
+        "nowPlaying": "Spotify'da Çalıyor",
+        "recentlyPlayed": "Spotify'da Son Dinlenen",
+        "offline": "Şu an Spotify'da bir şey dinlemiyor",
+        "loading": "Yükleniyor...",
+        "listen": "Dinle",
+        "recent": "Son",
+        "title": "Ne Dinliyorum?",
+        "live": "CANLI"
+      },
+      "github": {
+        "liveActivity": "Canlı GitHub Aktivitesi",
+        "publicRepos": "Açık Kaynak Repo",
+        "followers": "Takipçi",
+        "latestPushed": "Son Push",
+        "recentRepos": "Son Aktif Repolar",
+        "viewProfile": "Profili Gör",
+        "viewRepo": "Repoyu İncele",
+        "featuredProjects": "Öne Çıkan Projeler",
+        "contributionsYear": "Son 1 yılda {{count}} katkı",
+        "contributionsCount": "{{date}} tarihinde {{count}} katkı",
+        "hoverHint": "Detayları görmek için karelerin üzerine gelin",
+        "less": "Az",
+        "more": "Çok",
+        "publicRepoDesc": "Açık kaynak repo",
+        "updated": "Güncellendi",
+        "justNow": "Az önce",
+        "hoursAgo": "saat önce",
+        "daysAgo": "gün önce",
+        "loading": "GitHub aktiviteleri yükleniyor..."
       }
     }
   }
@@ -176,7 +250,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: "tr", // default language
+    lng: "tr",
     fallbackLng: "tr",
     interpolation: {
       escapeValue: false
