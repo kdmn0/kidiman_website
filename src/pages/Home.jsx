@@ -66,19 +66,6 @@ export default function Home() {
             {t('home.subtitle')}
           </motion.p>
         </div>
-
-        {/* Scroll Down Indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1, duration: 1 }}
-          className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center animate-bounce hidden md:flex pointer-events-none z-10"
-        >
-          <span className="text-xs text-textMuted mb-1.5 tracking-wider uppercase">Scroll</span>
-          <div className="w-5 h-9 border-2 border-textMuted/60 rounded-full flex justify-center p-1">
-            <div className="w-1 h-2.5 bg-brand rounded-full"></div>
-          </div>
-        </motion.div>
       </section>
 
       <div className="max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 space-y-24">
