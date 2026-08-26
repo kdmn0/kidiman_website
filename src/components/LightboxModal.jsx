@@ -4,7 +4,7 @@ import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function LightboxModal({ isOpen, onClose, images, currentIndex, onPrev, onNext }) {
   useEffect(() => {
-    if (!isOpen) return;
+    if (!isOpen || !images || images.length === 0) return;
 
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') onClose();
@@ -16,11 +16,24 @@ export default function LightboxModal({ isOpen, onClose, images, currentIndex, o
     // Lock background scroll when open
     document.body.style.overflow = 'hidden';
 
+    // Preload next and previous images in background for instant navigation
+    const nextIdx = (currentIndex + 1) % images.length;
+    const prevIdx = (currentIndex - 1 + images.length) % images.length;
+
+    if (images[nextIdx]?.src) {
+      const imgNext = new Image();
+      imgNext.src = images[nextIdx].src;
+    }
+    if (images[prevIdx]?.src) {
+      const imgPrev = new Image();
+      imgPrev.src = images[prevIdx].src;
+    }
+
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
       document.body.style.overflow = 'unset';
     };
-  }, [isOpen, onClose, onPrev, onNext]);
+  }, [isOpen, onClose, onPrev, onNext, currentIndex, images]);
 
   if (!isOpen || !images || images.length === 0) return null;
 

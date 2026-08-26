@@ -4,38 +4,38 @@
 export const galleryData = [
   {
     id: 1,
-    src: "/gallery/1.jpg",
+    src: "/gallery/1.webp",
     title: "1",
   },
   {
     id: 2,
-    src: "/gallery/2.jpg",
+    src: "/gallery/2.webp",
     title: "2",
   },
   {
     id: 3,
-    src: "/gallery/3.jpg",
+    src: "/gallery/3.webp",
     title: "3",
   },
   {
     id: 4,
-    src: "/gallery/4.jpg",
+    src: "/gallery/4.webp",
     title: "4",
   },
   {
     id: 5,
-    src: "/gallery/5.jpg",
+    src: "/gallery/5.webp",
     title: "5",
   },
   
   {
     id: 6,
-    src: "/gallery/6.jpg",
+    src: "/gallery/6.webp",
     title: "6",
   },
   {
     id: 7,
-    src: "/gallery/7.jpg",
+    src: "/gallery/7.webp",
     title: "7",
   },
   /*{
