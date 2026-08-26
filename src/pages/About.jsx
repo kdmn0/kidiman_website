@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 import { FileText, GraduationCap, Briefcase } from 'lucide-react';
 import SpotifyNowPlaying from '../components/SpotifyNowPlaying';
+import SEO from '../components/SEO';
 
 export default function About() {
   const { t } = useTranslation();
@@ -28,6 +29,13 @@ export default function About() {
       transition={{ duration: 0.5 }}
       className="space-y-8 py-6"
     >
+      <SEO
+        title={t('seo.about.title')}
+        description={t('seo.about.description')}
+        keywords={t('seo.about.keywords')}
+        path="about"
+      />
+      <h1 className="sr-only">{t('about.heading')} - {t('about.subtitle')}</h1>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         {/* 1. Ben Kimim */}
         <motion.div variants={item} className="card-base flex flex-col h-full bg-transparent justify-between">

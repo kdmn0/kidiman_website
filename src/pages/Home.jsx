@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import Lanyard from '../components/Lanyard';
 import ProjectCard from '../components/ProjectCard';
+import SEO from '../components/SEO';
 
 export default function Home() {
   const { t, i18n } = useTranslation();
@@ -39,6 +40,12 @@ export default function Home() {
 
   return (
     <div className="w-full space-y-16 pb-16">
+      <SEO
+        title={t('seo.home.title')}
+        description={t('seo.home.description')}
+        keywords={t('seo.home.keywords')}
+        path=""
+      />
       {/* 1. HERO SECTION */}
       <section className="w-full min-h-[calc(100vh-4rem)] flex flex-col md:flex-row items-center justify-center relative px-4 md:px-8 overflow-hidden">
         {/* 3D Lanyard Component */}

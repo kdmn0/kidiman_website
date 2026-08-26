@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { Maximize2, Image as ImageIcon } from 'lucide-react';
 import { galleryData } from '../data/galleryData';
 import LightboxModal from '../components/LightboxModal';
+import SEO from '../components/SEO';
 
 export default function Gallery() {
   const { t } = useTranslation();
@@ -25,6 +26,13 @@ export default function Gallery() {
 
   return (
     <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <SEO
+        title={t('seo.gallery.title')}
+        description={t('seo.gallery.description')}
+        keywords={t('seo.gallery.keywords')}
+        path="gallery"
+      />
+      <h1 className="sr-only">{t('gallery.heading')} - {t('gallery.subtitle')}</h1>
       {/* Masonry Grid matching the reference layout */}
       <motion.div
         initial={{ opacity: 0 }}

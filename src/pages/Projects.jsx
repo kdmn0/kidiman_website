@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 import ProjectCard from '../components/ProjectCard';
 import GitHubLiveActivity from '../components/GitHubLiveActivity';
+import SEO from '../components/SEO';
 
 export default function Projects() {
   const { t } = useTranslation();
@@ -56,6 +57,13 @@ export default function Projects() {
       animate="show"
       className="space-y-8 py-6"
     >
+      <SEO
+        title={t('seo.projects.title')}
+        description={t('seo.projects.description')}
+        keywords={t('seo.projects.keywords')}
+        path="projects"
+      />
+      <h1 className="sr-only">{t('projects.heading')}</h1>
       <motion.div variants={item}>
         <GitHubLiveActivity />
       </motion.div>

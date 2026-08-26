@@ -120,6 +120,33 @@ const resources = {
         "hoursAgo": "hours ago",
         "daysAgo": "days ago",
         "loading": "Loading GitHub activity..."
+      },
+      "seo": {
+        "home": {
+          "title": "Yiğit Arda Kıdıman | Software Developer & Engineering Student",
+          "description": "Personal portfolio of Yiğit Arda Kıdıman - Software Developer showcasing modern web apps, 3D graphics with Three.js, React, Django, Spotify integration, and GitHub activity.",
+          "keywords": "Yiğit Arda Kıdıman, Software Developer, React, Three.js, Django, TypeScript, Portfolio, Web Development, Frontend, Backend, OSTIM Technical University"
+        },
+        "about": {
+          "title": "About Me | Yiğit Arda Kıdıman",
+          "description": "Learn more about Yiğit Arda Kıdıman, his education in Software Engineering at OSTIM Technical University, work experience at Volinor Defense, and technical skills.",
+          "keywords": "About Yiğit Arda Kıdıman, Software Engineer, Volinor Defense, OSTIM, Experience, Resume, Skills"
+        },
+        "projects": {
+          "title": "Projects & Open Source | Yiğit Arda Kıdıman",
+          "description": "Explore featured projects, live demos, and open source contributions by Yiğit Arda Kıdıman, including Volinor Defense, KıdıMusic Generator, and GitFetch.",
+          "keywords": "Yiğit Arda Kıdıman Projects, Volinor, KıdıMusic, GitFetch, Open Source, React Projects, Three.js 3D"
+        },
+        "gallery": {
+          "title": "Gallery & Moments | Yiğit Arda Kıdıman",
+          "description": "Photography, events, hackathons, and moments captured throughout Yiğit Arda Kıdıman's journey in software and technology.",
+          "keywords": "Yiğit Arda Kıdıman Gallery, Tech Events, Photography, Memories, Hackathons"
+        },
+        "contact": {
+          "title": "Contact & Connect | Yiğit Arda Kıdıman",
+          "description": "Get in touch with Yiğit Arda Kıdıman for freelance work, software engineering collaborations, inquiries, or social networking via LinkedIn, GitHub, or Email.",
+          "keywords": "Contact Yiğit Arda Kıdıman, Email, LinkedIn, Instagram, Hire Software Developer"
+        }
       }
     }
   },
@@ -241,6 +268,33 @@ const resources = {
         "hoursAgo": "saat önce",
         "daysAgo": "gün önce",
         "loading": "GitHub aktiviteleri yükleniyor..."
+      },
+      "seo": {
+        "home": {
+          "title": "Yiğit Arda Kıdıman | Yazılım Geliştirici & Mühendislik Öğrencisi",
+          "description": "Yiğit Arda Kıdıman kişisel portfolyo web sitesi. React, Three.js 3D grafikler, Django, TypeScript projeleri, canlı Spotify ve GitHub aktiviteleri.",
+          "keywords": "Yiğit Arda Kıdıman, Yazılım Geliştirici, Software Developer, React, Three.js, Django, TypeScript, Portfolyo, OSTİM Teknik Üniversitesi, Web Geliştirme"
+        },
+        "about": {
+          "title": "Hakkımda | Yiğit Arda Kıdıman",
+          "description": "Yiğit Arda Kıdıman hakkında bilgi edinin. OSTİM Teknik Üniversitesi Yazılım Mühendisliği eğitimi, Volinor Savunma iş deneyimi ve teknik yetenekler.",
+          "keywords": "Yiğit Arda Kıdıman Kimdir, Hakkımda, Volinor Savunma, OSTİM, Özgeçmiş, Yetenekler, Yazılım Mühendisi"
+        },
+        "projects": {
+          "title": "Projeler & Açık Kaynak | Yiğit Arda Kıdıman",
+          "description": "Yiğit Arda Kıdıman tarafından geliştirilen projeler ve açık kaynaklı çalışmalar: Volinor Savunma, KıdıMusic Generator, GitFetch README Generator ve daha fazlası.",
+          "keywords": "Yiğit Arda Kıdıman Projeleri, Volinor, KıdıMusic, GitFetch, Açık Kaynak, React Projeleri, Three.js"
+        },
+        "gallery": {
+          "title": "Galeri & Anılar | Yiğit Arda Kıdıman",
+          "description": "Yiğit Arda Kıdıman'ın teknoloji yolculuğundan, etkinliklerden ve özel anlardan oluşan fotoğraf galerisi.",
+          "keywords": "Yiğit Arda Kıdıman Galeri, Etkinlikler, Fotoğraflar, Anılar, Yazılım"
+        },
+        "contact": {
+          "title": "İletişim & Bağlantılar | Yiğit Arda Kıdıman",
+          "description": "İş birlikleri, projeler, sorularınız veya sosyal medya iletişimi için Yiğit Arda Kıdıman ile LinkedIn, GitHub, Instagram veya E-posta üzerinden iletişime geçin.",
+          "keywords": "Yiğit Arda Kıdıman İletişim, E-posta, LinkedIn, Instagram, Yazılımcı İletişim"
+        }
       }
     }
   }

@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 import { Mail } from 'lucide-react';
 import { FaLinkedin, FaInstagram } from 'react-icons/fa';
+import SEO from '../components/SEO';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -47,6 +48,13 @@ export default function Contact() {
       animate="show"
       className="space-y-8 py-6 max-w-5xl mx-auto px-4"
     >
+      <SEO
+        title={t('seo.contact.title')}
+        description={t('seo.contact.description')}
+        keywords={t('seo.contact.keywords')}
+        path="contact"
+      />
+      <h1 className="sr-only">{t('contact.heading')} - {t('contact.subtitle')}</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {contacts.map((contact, index) => (
           <motion.div key={index} variants={item}>
