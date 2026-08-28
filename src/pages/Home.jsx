@@ -12,13 +12,6 @@ export default function Home() {
 
   const projectsData = [
     {
-      title: t('projects.volinor'),
-      description: t('projects.volinorDesc'),
-      tags: [t('projects.tags.React'), t('projects.tags.ThreeJS'), t('projects.tags.Django')],
-      link: "https://www.volinor.com/",
-      image: "/img/volinor.png"
-    },
-    {
       title: t('projects.kidimusic_generator'),
       description: t('projects.kidimusic_generatorDesc'),
       tags: [t('projects.tags.Typescript'), t('projects.tags.JavaScript'), t('projects.tags.CSS')],
@@ -26,6 +19,13 @@ export default function Home() {
       link: "https://music.kidiman.com",
       image: "/img/kidimusic.png",
       isOpenSource: true
+    },
+    {
+      title: t('projects.volinor'),
+      description: t('projects.volinorDesc'),
+      tags: [t('projects.tags.React'), t('projects.tags.ThreeJS'), t('projects.tags.Django')],
+      link: "https://www.volinor.com/",
+      image: "/img/volinor.png"
     },
     {
       title: t('projects.gitfetch_generator'),

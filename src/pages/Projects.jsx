@@ -24,6 +24,15 @@ export default function Projects() {
 
   const projectsData = [
     {
+      title: t('projects.kidimusic_generator'),
+      description: t('projects.kidimusic_generatorDesc'),
+      tags: [t('projects.tags.Typescript'), t('projects.tags.JavaScript'), t('projects.tags.CSS')],
+      github: "https://github.com/yigitardakidiman/kidimusic-generator-app",
+      link: "https://music.kidiman.com",
+      image: "/img/kidimusic.png",
+      isOpenSource: true
+    },
+    {
       title: t('projects.volinor'),
       description: t('projects.volinorDesc'),
       tags: [t('projects.tags.React'), t('projects.tags.ThreeJS'), t('projects.tags.Django')],
@@ -37,15 +46,6 @@ export default function Projects() {
       github: "https://github.com/yigitardakidiman/gitfetch-readme-generator",
       link: "https://gitfetch-readme-generator.vercel.app/",
       image: "/img/gitfetch.png",
-      isOpenSource: true
-    },
-    {
-      title: t('projects.kidimusic_generator'),
-      description: t('projects.kidimusic_generatorDesc'),
-      tags: [t('projects.tags.Typescript'), t('projects.tags.JavaScript'), t('projects.tags.CSS')],
-      github: "https://github.com/yigitardakidiman/kidimusic-generator-app",
-      link: "https://music.kidiman.com",
-      image: "/img/kidimusic.png",
       isOpenSource: true
     }
   ];
