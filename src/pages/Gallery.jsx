@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'motion/react';
 import { Maximize2, Image as ImageIcon } from 'lucide-react';
@@ -8,33 +8,54 @@ import SEO from '../components/SEO';
 
 function GalleryImage({ item, index, onClick }) {
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef(null);
   const isPriority = index < 4;
 
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(el);
+    return () => observer.unobserve(el);
+  }, []);
+
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.1 }}
-      transition={{ duration: 0.4, delay: (index % 4) * 0.05 }}
+    <div
+      ref={ref}
       onClick={onClick}
       className="break-inside-avoid relative group rounded-xl md:rounded-2xl overflow-hidden bg-[#16161a] border border-white/[0.08] hover:border-brand/40 shadow-md hover:shadow-[0_6px_24px_rgba(37,99,235,0.15)] transition-all duration-300 cursor-pointer"
+      style={{
+        opacity: isVisible && isLoaded ? 1 : 0,
+        transform: isVisible ? 'translateY(0)' : 'translateY(20px)',
+        transition: `opacity 0.4s ease ${(index % 4) * 0.05}s, transform 0.4s ease ${(index % 4) * 0.05}s`,
+        willChange: 'opacity, transform',
+      }}
     >
       <div className="w-full relative overflow-hidden bg-secondary/40 aspect-auto min-h-[160px]">
         {/* Shimmer skeleton placeholder while loading */}
-        {!isLoaded && (
+        {!isLoaded && isVisible && (
           <div className="absolute inset-0 bg-gradient-to-r from-white/[0.03] via-white/[0.08] to-white/[0.03] animate-pulse" />
         )}
 
         <img
-          src={item.src}
+          src={isPriority || isVisible ? item.src : undefined}
           alt={item.title || `Gallery photo ${index + 1}`}
           loading={isPriority ? "eager" : "lazy"}
           fetchPriority={isPriority ? "high" : "auto"}
           decoding="async"
           onLoad={() => setIsLoaded(true)}
-          className={`w-full h-auto object-cover rounded-xl md:rounded-2xl transition-all duration-500 group-hover:scale-105 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
-          }`}
+          className="w-full h-auto object-cover rounded-xl md:rounded-2xl transition-transform duration-500 group-hover:scale-105"
           onError={(e) => {
             setIsLoaded(true);
             e.target.onerror = null;
@@ -49,7 +70,7 @@ function GalleryImage({ item, index, onClick }) {
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

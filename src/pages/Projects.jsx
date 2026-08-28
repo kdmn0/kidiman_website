@@ -31,21 +31,21 @@ export default function Projects() {
       image: "/img/volinor.png"
     },
     {
-      title: t('projects.kidimusic_generator'),
-      description: t('projects.kidimusic_generatorDesc'),
-      tags: [t('projects.tags.Typescript'), t('projects.tags.JavaScript'), t('projects.tags.CSS')],
-      github: "https://github.com/yigitardakidiman/kidimusic-generator-app",
-      link: "https://music.kidiman.com",
-      image: "/img/kidimusic.png",
-      isOpenSource: true
-    },
-    {
       title: t('projects.gitfetch_generator'),
       description: t('projects.gitfetch_generatorDesc'),
       tags: [t('projects.tags.React'), t('projects.tags.Typescript'), t('projects.tags.Tailwind')],
       github: "https://github.com/yigitardakidiman/gitfetch-readme-generator",
       link: "https://gitfetch-readme-generator.vercel.app/",
       image: "/img/gitfetch.png",
+      isOpenSource: true
+    },
+    {
+      title: t('projects.kidimusic_generator'),
+      description: t('projects.kidimusic_generatorDesc'),
+      tags: [t('projects.tags.Typescript'), t('projects.tags.JavaScript'), t('projects.tags.CSS')],
+      github: "https://github.com/yigitardakidiman/kidimusic-generator-app",
+      link: "https://music.kidiman.com",
+      image: "/img/kidimusic.png",
       isOpenSource: true
     }
   ];
