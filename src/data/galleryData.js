@@ -38,12 +38,12 @@ export const galleryData = [
     src: "/gallery/7.webp",
     title: "7",
   },
-  /*{
+  {
     id: 8,
-    src: "/gallery/8.jpg",
+    src: "/gallery/8.webp",
     title: "8",
   },
-  {
+  /*{
     id: 9,
     src: "/gallery/9.jpg",
     title: "9",
