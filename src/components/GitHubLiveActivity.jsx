@@ -62,13 +62,13 @@ export default function GitHubLiveActivity() {
   };
 
   return (
-    <div className="card-base p-3.5 sm:p-5 relative overflow-hidden bg-black/40 backdrop-blur-xl border border-white/10 hover:border-brand/30 transition-all duration-300 mb-8 group">
+    <div className="rounded-2xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] p-3.5 sm:p-5 relative overflow-hidden bg-black/40 backdrop-blur-xl border border-white/10 mb-8">
       {/* Header Bar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-3 pb-3 border-b border-white/5 text-xs">
         {/* Profile Info */}
         <div className="flex items-center justify-between w-full sm:w-auto">
           <div className="flex items-center gap-2">
-            <FaGithub className="text-lg sm:text-base text-textMain group-hover:text-brand transition-colors shrink-0" />
+            <FaGithub className="text-lg sm:text-base text-textMain shrink-0" />
             <a
               href="https://github.com/yigitardakidiman"
               target="_blank"
@@ -150,31 +150,17 @@ export default function GitHubLiveActivity() {
               ))}
             </div>
 
-            {/* Bottom Status / Legend Bar */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-1.5 sm:gap-2 pt-2 border-t border-white/5 text-[11px] text-textMuted font-mono">
-              <div className="min-h-[1.25rem] sm:min-h-[1.5rem] flex items-center">
-                {hoveredDay ? (
-                  <span className="text-emerald-400 font-medium bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 text-[10px] sm:text-[11px]">
-                    {t('github.contributionsCount', { count: hoveredDay.count, date: hoveredDay.date })}
-                  </span>
-                ) : (
-                  <span className="text-textMuted/50 text-[10px] sm:text-[11px]">
-                    {t('github.hoverHint')}
-                  </span>
-                )}
-              </div>
-
-              <div className="flex items-center gap-1.5 text-[10px] text-textMuted/70 self-end sm:self-auto shrink-0">
-                <span>{t('github.less')}</span>
-                <div className="flex gap-1 items-center">
-                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-[1px] sm:rounded-[2px] bg-[#161b22] border border-white/5"></div>
-                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-[1px] sm:rounded-[2px] bg-[#0e4429]"></div>
-                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-[1px] sm:rounded-[2px] bg-[#006d32]"></div>
-                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-[1px] sm:rounded-[2px] bg-[#26a641]"></div>
-                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-[1px] sm:rounded-[2px] bg-[#39d353]"></div>
-                </div>
-                <span>{t('github.more')}</span>
-              </div>
+            {/* Bottom Status Bar */}
+            <div className="flex items-center justify-between pt-2 border-t border-white/5 text-[11px] text-textMuted font-mono min-h-[1.75rem]">
+              {hoveredDay ? (
+                <span className="text-emerald-400 font-medium bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 text-[10px] sm:text-[11px]">
+                  {t('github.contributionsCount', { count: hoveredDay.count, date: hoveredDay.date })}
+                </span>
+              ) : (
+                <span className="text-textMuted/50 text-[10px] sm:text-[11px]">
+                  {t('github.hoverHint')}
+                </span>
+              )}
             </div>
           </div>
         )}
