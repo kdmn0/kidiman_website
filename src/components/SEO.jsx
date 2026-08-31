@@ -38,7 +38,8 @@ export default function SEO({
   image = DEFAULT_IMAGE,
   type = 'website',
   path = '',
-  schema = null
+  schema = null,
+  localized = true
 }) {
   const { i18n } = useTranslation();
   const location = useLocation();
@@ -47,7 +48,9 @@ export default function SEO({
   useEffect(() => {
     // 1. Clean Path and Canonical URLs
     const subPath = path ? (path.startsWith('/') ? path : `/${path}`) : '';
-    const currentCanonicalUrl = `${SITE_URL}/${lang}${subPath}`;
+    const currentCanonicalUrl = localized
+      ? `${SITE_URL}/${lang}${subPath}`
+      : `${SITE_URL}${subPath}`;
     const trUrl = `${SITE_URL}/tr${subPath}`;
     const enUrl = `${SITE_URL}/en${subPath}`;
     const fullImageUrl = image.startsWith('http') ? image : `${SITE_URL}${image.startsWith('/') ? '' : '/'}${image}`;
@@ -87,9 +90,13 @@ export default function SEO({
 
     // 6. Canonical & Hreflang Tags
     setLinkTag('canonical', currentCanonicalUrl);
-    setLinkTag('alternate', trUrl, 'tr');
-    setLinkTag('alternate', enUrl, 'en');
-    setLinkTag('alternate', trUrl, 'x-default');
+    if (localized) {
+      setLinkTag('alternate', trUrl, 'tr');
+      setLinkTag('alternate', enUrl, 'en');
+      setLinkTag('alternate', trUrl, 'x-default');
+    } else {
+      document.querySelectorAll('link[rel="alternate"][hreflang]').forEach((element) => element.remove());
+    }
 
     // 7. Structured Data (JSON-LD)
     const basePersonSchema = {
@@ -162,7 +169,7 @@ export default function SEO({
     }
     scriptElement.textContent = JSON.stringify(schemasToInject);
 
-  }, [title, description, keywords, image, type, path, schema, lang, location.pathname]);
+  }, [title, description, keywords, image, type, path, schema, localized, lang, location.pathname]);
 
   return null;
 }

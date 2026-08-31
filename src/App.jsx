@@ -9,6 +9,7 @@ import About from './pages/About';
 import Projects from './pages/Projects';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import Links from './pages/Links';
 import ReactLenis from 'lenis/react';
 import CustomCursor from './components/CustomCursor';
 
@@ -81,6 +82,9 @@ function App() {
     <ReactLenis root>
       <CustomCursor />
       <Routes>
+        {/* Standalone link-in-bio page — intentionally outside the site shell */}
+        <Route path="/links" element={<Links />} />
+
         {/* Root redirect */}
         <Route path="/" element={<RootRedirect />} />
 
