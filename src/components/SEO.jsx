@@ -138,7 +138,8 @@ export default function SEO({
     const webSiteSchema = {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      'name': 'Yiğit Arda Kıdıman Portfolio',
+      'name': 'Yiğit Arda Kıdıman',
+      'alternateName': ['Arda Kıdıman', 'kidiman.com', 'Yiğit Arda Kıdıman Portfolio'],
       'url': SITE_URL,
       'inLanguage': ['tr-TR', 'en-US'],
       'author': {
