@@ -124,8 +124,8 @@ const resources = {
       "seo": {
         "home": {
           "title": "Yiğit Arda Kıdıman | Software Developer & Engineering Student",
-          "description": "Personal portfolio of Yiğit Arda Kıdıman - Software Developer showcasing modern web apps, 3D graphics with Three.js, React, Django, Spotify integration, and GitHub activity.",
-          "keywords": "Yiğit Arda Kıdıman, Software Developer, React, Three.js, Django, TypeScript, Portfolio, Web Development, Frontend, Backend, OSTIM Technical University"
+          "description": "Personal portfolio of Yiğit Arda Kıdıman — engineering modern full-stack architectures, AI-driven systems, and interactive digital experiences.",
+          "keywords": "Yiğit Arda Kıdıman, Software Developer, Full-stack, Artificial Intelligence, React, Three.js, Django, TypeScript, Portfolio, Web Development, Frontend, Backend, OSTIM Technical University"
         },
         "about": {
           "title": "About Me | Yiğit Arda Kıdıman",
@@ -272,8 +272,8 @@ const resources = {
       "seo": {
         "home": {
           "title": "Yiğit Arda Kıdıman | Yazılım Geliştirici & Mühendislik Öğrencisi",
-          "description": "Yiğit Arda Kıdıman kişisel portfolyo web sitesi. React, Three.js 3D grafikler, Django, TypeScript projeleri, canlı Spotify ve GitHub aktiviteleri.",
-          "keywords": "Yiğit Arda Kıdıman, Yazılım Geliştirici, Software Developer, React, Three.js, Django, TypeScript, Portfolyo, OSTİM Teknik Üniversitesi, Web Geliştirme"
+          "description": "Modern full-stack web mimarileri, yapay zeka odaklı sistemler ve etkileşimli dijital deneyimler geliştiren Yiğit Arda Kıdıman'ın kişisel portfolyosu.",
+          "keywords": "Yiğit Arda Kıdıman, Yazılım Geliştirici, Full-stack, Yapay Zeka, Software Developer, React, Three.js, Django, TypeScript, Portfolyo, OSTİM Teknik Üniversitesi, Web Geliştirme"
         },
         "about": {
           "title": "Hakkımda | Yiğit Arda Kıdıman",
