@@ -11,7 +11,6 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Links from './pages/Links';
 import ReactLenis from 'lenis/react';
-import CustomCursor from './components/CustomCursor';
 
 const SUPPORTED_LANGS = ['tr', 'en'];
 
@@ -80,7 +79,6 @@ function LegacyRedirect({ to }) {
 function App() {
   return (
     <ReactLenis root>
-      <CustomCursor />
       <Routes>
         {/* Standalone link-in-bio page — intentionally outside the site shell */}
         <Route path="/links" element={<Links />} />

@@ -24,7 +24,7 @@ Projeleri, yetenekleri, deneyimleri ve fotoğrafları sergilemek için geliştir
 - 🎵 **Canlı Spotify Now Playing:** Spotify Web API üzerinden o an çalan veya en son dinlenen şarkıyı, gerçek zamanlı süre sayacı ve dinamik ilerleme çubuğu ile gösteren widget.
 - 🌐 **URL Tabanlı Çift Dil Desteği (`/tr` ve `/en`):** `i18next` ve `react-router-dom` entegrasyonu ile tam SEO uyumlu, sayfa konumunu koruyan Türkçe/İngilizce rotalama.
 - 📜 **Akıcı Kaydırma (Smooth Scroll):** Lenis entegrasyonu ile doğal ve pürüzsüz sayfa kaydırma deneyimi.
-- ✨ **Mikro Etkileşimler & Özel İmleç:** Framer Motion destekli sayfa geçişleri, özel fare imleci ve Lightbox modal destekli fotoğraf galerisi.
+- ✨ **Mikro Etkileşimler & Akıcı Animasyonlar:** Framer Motion destekli sayfa geçişleri ve Lightbox modal destekli fotoğraf galerisi.
 - 📱 **Tam Duyarlı Tasarım (Mobile-First):** Tailwind CSS v4 ile mobil, tablet ve masaüstü ekranlar için optimize edilmiş modern karanlık tema (dark mode).
 
 ### 🛠️ Kullanılan Teknolojiler (Tech Stack)
@@ -76,7 +76,7 @@ A modern, interactive, and fully responsive personal portfolio website built to 
 - 🎵 **Live Spotify Now Playing:** Real-time music widget showing currently playing or recently played tracks with live progress timeline and duration timers via Spotify Web API.
 - 🌐 **URL-Based Bilingual Routing (`/tr` & `/en`):** SEO-friendly, state-preserving bilingual routing built with `i18next` and `react-router-dom`.
 - 📜 **Smooth Scrolling:** Buttery-smooth, native-feeling scroll experience integrated with Lenis.
-- ✨ **Micro-Interactions & Custom Cursor:** Framer Motion page transitions, custom reactive cursor, and a Lightbox modal photography gallery.
+- ✨ **Micro-Interactions & Fluid Animations:** Framer Motion page transitions and Lightbox modal photography gallery.
 - 📱 **Fully Responsive Layout:** Clean, dark-mode-first interface optimized across all screen sizes with Tailwind CSS v4.
 
 ### 🛠️ Tech Stack

@@ -66,12 +66,6 @@ html {
   background: rgba(255, 255, 255, 0.4);
 }
 
-/* Hide default cursor on desktop since we have a custom one */
-@media (pointer: fine) {
-  * {
-    cursor: none !important;
-  }
-}
 
 /* Marquee / Kayan Yazı Animasyonu */
 @keyframes marquee {
